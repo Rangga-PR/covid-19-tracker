@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 :root {
   font-size: 34px;
 }
@@ -7,4 +10,10 @@
   transition: all 0.5s;
   user-select: none;
   background: linear-gradient(to bottom, white, black);
+}
+
+body {
+  margin: 0;
+  background: url("./assets/img/bg.webp") left / cover fixed no-repeat;
+  font-family: "Roboto", sans-serif;
 }
