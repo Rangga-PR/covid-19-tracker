@@ -1,17 +1,27 @@
 import React from "react";
+import Title from "./component/title";
+import Stats from "./component/stats";
 
 const App = () => {
   return (
     <>
-      <h1 className="hello-world">Hello World, Its ya boiii React</h1>
+      <div className="content-wrapper">
+        <Stats />
+        <Title />
+      </div>
       <style jsx>
         {`
-          .hello-world {
-            color: #35627d;
-
-            &:hover {
-              color: #c4c4c4;
+          .content-wrapper {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            overflow-x: scroll;
+            ::-webkit-scrollbar {
+              display: none;
             }
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-snap-type: x mandatory;
           }
         `}
       </style>

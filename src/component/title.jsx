@@ -13,8 +13,9 @@ const Title = () => {
           .wrapper {
             display: flex;
             flex-direction: column;
-            min-width: 100%;
-            min-heigth: 100%;
+            min-width: 100vw;
+            min-heigth: 100vh;
+            scroll-snap-align: center;
           }
 
           .title {
