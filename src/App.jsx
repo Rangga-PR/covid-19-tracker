@@ -6,8 +6,8 @@ const App = () => {
   return (
     <>
       <div className="content-wrapper">
-        <Stats />
         <Title />
+        <Stats />
       </div>
       <style jsx>
         {`

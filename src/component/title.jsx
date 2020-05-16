@@ -5,7 +5,7 @@ const Title = () => {
     <div className="wrapper">
       <h1 className="title">Track COVID-19 cases in Indonesia</h1>
       <div className="swipe-prompt">
-        <p className="swipe">swipe left to see</p>
+        <p className="swipe">swipe right to see</p>
         <i className="material-icons">swap_horizontal_circle</i>
       </div>
       <style jsx>
