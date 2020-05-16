@@ -40,42 +40,44 @@ const Stats = () => {
     <div className="wrapper">
       <p className="last-update">Last updated</p>
       <p className="date">{stat.last_update.slice(0, 19)}</p>
-      <Card>
-        <div className="stat-wrapper">
-          <img className="img" src={stretcher} alt="stretcher" />
-          <div className="stat">
-            <p className="stat-title">Total Cases</p>
-            <p className="stat-count">{stat.rows[0].total_cases}</p>
+      <div className="card-wrapper">
+        <Card>
+          <div className="stat-wrapper">
+            <img className="img" src={stretcher} alt="stretcher" />
+            <div className="stat">
+              <p className="stat-title">Total Cases</p>
+              <p className="stat-count">{stat.rows[0].total_cases}</p>
+            </div>
           </div>
-        </div>
-      </Card>
-      <Card>
-        <div className="stat-wrapper">
-          <div className="stat">
-            <p className="stat-title">Total Death</p>
-            <p className="stat-count">{stat.rows[0].total_deaths}</p>
+        </Card>
+        <Card>
+          <div className="stat-wrapper">
+            <div className="stat">
+              <p className="stat-title">Total Death</p>
+              <p className="stat-count">{stat.rows[0].total_deaths}</p>
+            </div>
+            <img className="img" src={grave} alt="grave" />
           </div>
-          <img className="img" src={grave} alt="grave" />
-        </div>
-      </Card>
-      <Card>
-        <div className="stat-wrapper">
-          <img className="img" src={healthCare} alt="healthcare" />
-          <div className="stat">
-            <p className="stat-title">Total Recover</p>
-            <p className="stat-count">{stat.rows[0].total_recovered}</p>
+        </Card>
+        <Card>
+          <div className="stat-wrapper">
+            <img className="img" src={healthCare} alt="healthcare" />
+            <div className="stat">
+              <p className="stat-title">Total Recover</p>
+              <p className="stat-count">{stat.rows[0].total_recovered}</p>
+            </div>
           </div>
-        </div>
-      </Card>
-      <Card>
-        <div className="stat-wrapper">
-          <div className="stat">
-            <p className="stat-title">Active Cases</p>
-            <p className="stat-count">{stat.rows[0].active_cases}</p>
+        </Card>
+        <Card>
+          <div className="stat-wrapper">
+            <div className="stat">
+              <p className="stat-title">Active Cases</p>
+              <p className="stat-count">{stat.rows[0].active_cases}</p>
+            </div>
+            <img className="img" src={infusion} alt="" />
           </div>
-          <img className="img" src={infusion} alt="" />
-        </div>
-      </Card>
+        </Card>
+      </div>
       <style jsx>
         {`
           .wrapper {
@@ -93,6 +95,14 @@ const Stats = () => {
               font-weight: bolder;
               color: #3f3f44;
             }
+          }
+
+          .card-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
 
           .stat-wrapper {
@@ -118,15 +128,21 @@ const Stats = () => {
             font-weight: bolder;
             color: gray;
           }
+
+          @media only screen and(min-width: 768px) {
+            .img {
+              width: 10%;
+              height: 10%;
+            }
+
+            .card-wrapper {
+              width: 50%;
+            }
+          }
         `}
       </style>
     </div>
   );
 };
-
-// Stats.propTypes = {
-//   // eslint-disable-next-line react/forbid-prop-types
-//   stat: PropTypes.object.isRequired,
-// };
 
 export default Stats;

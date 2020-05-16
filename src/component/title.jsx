@@ -43,6 +43,12 @@ const Title = () => {
             padding: 0;
             color: white;
           }
+
+          @media only screen and(min-width: 768px) {
+            .wrapper {
+              display: none;
+            }
+          }
         `}
       </style>
     </div>
