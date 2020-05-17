@@ -85,8 +85,8 @@ const Stats = () => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-width: 100vw;
-            min-height: 100vh;
+            min-width: 100%;
+            min-height: 100%;
             scroll-snap-align: start;
 
             .last-update,

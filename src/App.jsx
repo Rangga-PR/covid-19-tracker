@@ -13,6 +13,8 @@ const App = () => {
         {`
           .content-wrapper {
             max-width: 100%;
+            max-height: 100%;
+            height: 100%;
             display: flex;
             justify-content: space-between;
             overflow-x: scroll;
