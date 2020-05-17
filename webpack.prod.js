@@ -12,7 +12,7 @@ module.exports = merge(common, {
   devtool: "source-map",
   output: {
     filename: "[name]-[hash].js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -22,14 +22,14 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { importLoaders: 1 } },
           "postcss-loader",
-          "sass-loader"
-        ]
-      }
-    ]
+          "sass-loader",
+        ],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name]-[hash].css" }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   optimization: {
     runtimeChunk: "single",
@@ -37,14 +37,14 @@ module.exports = merge(common, {
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
-        title: "react app",
+        title: "indonesia covid-19 tracker",
         template: "./src/index.html",
         minify: {
           collapseWhitespace: true,
           removeComments: true,
-          removeRedundantAttributes: true
-        }
-      })
+          removeRedundantAttributes: true,
+        },
+      }),
     ],
     splitChunks: {
       chunks: "all",
@@ -57,9 +57,9 @@ module.exports = merge(common, {
               /[\\/]node_modules[\\/](.*?)([\\/]|$)/
             )[1];
             return `vendor-${packageName.replace("@", "")}`;
-          }
-        }
-      }
-    }
-  }
+          },
+        },
+      },
+    },
+  },
 });
